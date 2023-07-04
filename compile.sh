@@ -7,7 +7,7 @@ OS=$(uname -s)
 if [ "$OS" = "Darwin" ]; then
     echo "Macos: $OS"
     sed -i '' 's|set(USE_LLVM OFF)|set(USE_LLVM /opt/homebrew/opt/llvm@15/bin/llvm-config)|g' config.cmake
-    sed -i '' 's|set(USE_PAPI OFF)|set(USE_PAPI ON)|g' config.cmake
+    #sed -i '' 's|set(USE_PAPI OFF)|set(USE_PAPI ON)|g' config.cmake
 elif [ "$OS" = "Linux" ]; then
     echo "Linux: $OS"
     sed -i 's|set(USE_LLVM OFF)|set(USE_LLVM /lib/llvm-15/bin/llvm-config)|g' config.cmake
